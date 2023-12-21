@@ -1,0 +1,21 @@
+{
+  "typescript.validate.enable": false,
+  "typescript.format.enable": false,
+  "astro.typescript.diagnostics.enabled": false,
+  "eslint.probe": [
+      "javascript",
+      "javascriptreact",
+      "html",
+      "vue",
+      "markdown"
+  ],
+  "eslint.validate": [
+      "vue",
+      "html",
+      "javascript",
+      "typescript",
+      "javascriptreact",
+      "typescriptreact"
+  ],
+  "editor.tabSize": 2
+}
