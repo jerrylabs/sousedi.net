@@ -1,6 +1,6 @@
 ---
 const { title, description, className , ogTitle, ogUrl, ogImage, ogType, ogDesription} = Astro.props;
-// import Header from '../components/Header.astro'
+import Header from '../components/Header.astro'
 // import Footer from '../components/Footer.astro'
 ---
 
@@ -21,7 +21,7 @@ const { title, description, className , ogTitle, ogUrl, ogImage, ogType, ogDesri
   </head>
   <body>
     <div class={`container ${className || ''}`}>
-      <!-- <Header /> -->
+      <Header />
       <slot />
       <!-- <Footer /> -->
     </div>
@@ -39,7 +39,7 @@ const { title, description, className , ogTitle, ogUrl, ogImage, ogType, ogDesri
   body {
     background-color: #00336e;
     background-image: url('/img/okna02.png'), url('/img/okna01.png');
-
+    background-position: center center;
   }
 
   .container {
