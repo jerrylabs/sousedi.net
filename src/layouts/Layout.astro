@@ -20,7 +20,7 @@ const { title, description, className , ogTitle, ogUrl, ogImage, ogType, ogDesri
     <title>{title}</title>
   </head>
   <body>
-    <div class={className || null}>
+    <div class={`container ${className || ''}`}>
       <!-- <Header /> -->
       <slot />
       <!-- <Footer /> -->
@@ -36,12 +36,20 @@ const { title, description, className , ogTitle, ogUrl, ogImage, ogType, ogDesri
     font-family: 'Montserrat';
   }
 
+  body {
+    background-color: #00336e;
+    background-image: url('/img/okna02.png'), url('/img/okna01.png');
+
+  }
+
   .container {
     max-width: 80rem;
-    width: 100%;
+    width: 80%;
     margin: auto;
     box-sizing: border-box;
     padding: 0 1rem;
+    background: white;
+    min-height: 100vh;
   }
 
   h1, h2, h3 { margin: 0 0 1.5rem; font-weight: 500; }

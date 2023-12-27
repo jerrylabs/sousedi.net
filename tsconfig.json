@@ -4,7 +4,8 @@
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "component:*": ["src/components/*.astro"]
+      "component:*": ["src/components/*.astro"],
+      "layout:*": ["src/layouts/*.astro"],
     }
   }
 }
