@@ -1,0 +1,74 @@
+---
+const { className = 'zoomy', title, image, height = '18.75rem'} = Astro.props;
+---
+<div class:list={['jumbotron', {[className]: className}]} style={{height}}>
+  <div class="jumbotron__bg" style={`background-image: url('/img/${image}');`} />
+  {title && (
+    <div class="container">
+      <h1 class="jumbotron__title">{title}</h1>
+    </div>
+  )}
+</div>
+
+<style>
+  @keyframes zoomy {
+    0% { transform: scale(1); }
+    10% { transform: scale(1); }
+    90% { transform: scale(1.1); }
+    100% { transform: scale(1.1); }
+  }
+
+  .jumbotron { position: relative; overflow: hidden; z-index: 1;}
+  .jumbotron__bg {
+    position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: -1;
+    background-size: cover; background-position: center;
+  }
+
+  .zoomy .jumbotron__bg {
+    animation-name: zoomy;
+    animation-duration: 12s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  .jumbotron__title {
+    position: absolute;
+    display: inline-block;
+    bottom: 6rem;
+    color: white;
+    background: rgba(0,51,110,0.7);
+    padding: 1rem;
+    font-weight: normal;
+    font-size: 2rem;
+  }
+
+  @media (max-width: 1600px) {
+    .jumbotron {
+      height: 14.375rem;;
+    }
+    .jumbotron h1 {
+      margin-top: 8.125rem;;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .jumbotron {
+      height: auto;
+    }
+    .jumbotron h1 {
+      margin-top: 1.5rem;
+      font-size: 1.75rem;
+    }
+  }
+
+
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+</style>

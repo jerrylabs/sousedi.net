@@ -1,7 +1,16 @@
 ---
-const { title, description, className , ogTitle, ogUrl, ogImage, ogType, ogDesription} = Astro.props;
+const {
+  title = 'Sousedi.net',
+  description = 'Spoluobčané se společným zájmem o kultivaci veřejného prostoru, zlepšování kvality života a rozvoj demokratické společnosti',
+  className,
+  ogTitle,
+  ogImage,
+  ogType,
+  ogDescription
+} = Astro.props;
 import Header from '../components/Header.astro'
-// import Footer from '../components/Footer.astro'
+import Footer from '../components/Footer.astro'
+
 ---
 
 <!DOCTYPE html>
@@ -11,45 +20,60 @@ import Header from '../components/Header.astro'
     <meta name="description" content={description}>
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta name="generator" content={Astro.generator} />
-    {ogTitle && <meta property="og:title" content={ogTitle} />}
-    {ogUrl && <meta property="og:url" content={ogUrl} />}
-    {ogImage && <meta property="og:image" content={ogImage} />}
-    {ogType && <meta property="og:type" content={ogType} />}
-    {ogDesription && <meta property="og:description" content={ogDesription} />}
+    <meta name="author" content="JerryLabs" />
+    <meta property="og:title" content={ogTitle || title} />
+    <meta property="og:url" content={Astro.url.pathname} />
+    <meta property="og:image" content={ogImage || '/img/retro/logo-sousedi.svg'} />
+    <meta property="og:type" content={ogType || 'website'} />
+    <meta property="og:description" content={ogDescription || description} />
     <title>{title}</title>
   </head>
   <body>
-    <div class={`container ${className || ''}`}>
+    <div class={`layout${className ? ` ${className}` : ''}`}>
       <Header />
-      <slot />
-      <!-- <Footer /> -->
+      <div class="layout__content">
+        <slot />
+      </div>
+      <Footer />
     </div>
   </body>
 </html>
 
 <style is:global>
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500');
   html, body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat';
+    font-weight: 300;
+    background-color: white;
+    font-size: 16px;
   }
 
-  body {
-    background-color: #00336e;
-    background-image: url('/img/okna02.png'), url('/img/okna01.png');
-    background-position: center center;
+  /* @media (max-width: 800px) {
+    html {font-size: 90%; }
   }
+  @media (max-width: 600px) {
+    html { font-size: 85%; }
+  } */
 
   .container {
-    max-width: 80rem;
-    width: 80%;
+    max-width: 75rem;
+    width: 100%;
     margin: auto;
     box-sizing: border-box;
-    padding: 0 1rem;
-    background: white;
-    min-height: 100vh;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .layout {
+    min-height:  100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .layout__content {
+    flex: 1 0 100%;
   }
 
   h1, h2, h3 { margin: 0 0 1.5rem; font-weight: 500; }
@@ -57,14 +81,6 @@ import Header from '../components/Header.astro'
   ul { margin: 0; }
   section { padding: 2rem 0; outline: none !important; }
   section ul { margin-bottom: 1rem; }
-
-
-  p { max-width: 40rem; margin: 0 0 1rem; }
-  p.center { margin-left: auto; margin-right: auto; }
-  p.big { margin-top: 1rem; margin-bottom: 1rem; max-width: 45rem; }
-  @media (min-width: 750px) {  p.big {font-size: 120%; } }
-  @media (max-width: 999px) { p.big { margin: 1rem auto; text-align: center; } }
-  p.SRLCaption { max-width: none; }
 
   .hidden { display: none; }
   .nowrap { white-space: nowrap; }
