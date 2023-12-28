@@ -1,8 +1,8 @@
 ---
-const { className = 'zoomy', title, image, height = '18.75rem'} = Astro.props;
+const { className = 'zoomy', title, image, position = 'center', height = '18.75rem'} = Astro.props;
 ---
 <div class:list={['jumbotron', {[className]: className}]} style={{height}}>
-  <div class="jumbotron__bg" style={`background-image: url('/img/${image}');`} />
+  <div class="jumbotron__bg" style={{backgroundImage: `url('/img/${image}')`, backgroundPosition: position}} />
   {title && (
     <div class="container">
       <h1 class="jumbotron__title">{title}</h1>
@@ -21,7 +21,7 @@ const { className = 'zoomy', title, image, height = '18.75rem'} = Astro.props;
   .jumbotron { position: relative; overflow: hidden; z-index: 1;}
   .jumbotron__bg {
     position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: -1;
-    background-size: cover; background-position: center;
+    background-size: cover;
   }
 
   .zoomy .jumbotron__bg {
@@ -35,7 +35,7 @@ const { className = 'zoomy', title, image, height = '18.75rem'} = Astro.props;
   .jumbotron__title {
     position: absolute;
     display: inline-block;
-    bottom: 6rem;
+    bottom: 20%;
     color: white;
     background: rgba(0,51,110,0.7);
     padding: 1rem;
