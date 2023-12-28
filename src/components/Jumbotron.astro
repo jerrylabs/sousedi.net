@@ -41,6 +41,8 @@ const { className = 'zoomy', title, image, height = '18.75rem'} = Astro.props;
     padding: 1rem;
     font-weight: normal;
     font-size: 2rem;
+    max-width: calc(100% - 2rem);
+    box-sizing: border-box;
   }
 
   @media (max-width: 1600px) {
