@@ -6,6 +6,7 @@
     "paths": {
       "component:*": ["src/components/*.astro"],
       "layout:*": ["src/layouts/*.astro"],
+      "utils": ["src/utils"],
     }
   }
 }

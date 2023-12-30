@@ -1,0 +1,41 @@
+---
+import Layout from 'layout:Layout'
+---
+<Layout>
+  <main class="container">
+    <h1>Kalendář akcí</h1>
+    <div class="events">
+      Načítám události...
+    </div>
+  </main>
+</Layout>
+
+<script>
+  import { getEvents, formatEvent } from 'utils'
+  const events = await getEvents()
+  console.log(events);
+  (document.querySelector('.events') as HTMLElement).innerHTML = events.map(formatEvent).join('')
+</script>
+
+<style is:global>
+  .events {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    @media (max-width: 1200px) {
+      gap: 1rem;
+    }
+  }
+  .event {
+    padding: 1rem;
+    background: #f4ae00;
+    flex: 1 0 calc(50% - 2rem);
+    box-sizing: border-box;
+    @media (max-width: 1200px) {
+      flex: 1 0 100%;
+    }
+  }
+  .event__title { margin: 0; }
+  .event__date, .event__place { font-weight: 500; }
+  .event__description { margin-top: 1rem; font-size: 1.2rem; }
+</style>

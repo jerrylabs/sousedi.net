@@ -4,9 +4,33 @@ import Layout from 'layout:Layout'
 ---
 
 <Layout>
-	<Jumbotron title="V Orlové svítá na lepší časy" height="30rem" image="soumrak_v_orlove.jpeg" position="bottom" />
-	<p class="center">
-		<img src="/img/retro/construction.gif" /> <br/>
-		Stránky jsou prozatím ve výstavbě, děkujeme za pochopení 💙
-	</p>
+  <Jumbotron height="30rem" title="V Orlové svítá na lepší časy" image="soumrak_v_orlove.jpeg" position="bottom" />
+  <main class="container">
+    <div class="center">
+      <h2>Nejbližší akce:</h2>
+      <div class="next-event">
+        Načítám...
+      </div>
+    </div>
+  </main>
 </Layout>
+
+<script>
+  import { getEvents, formatEvent } from 'utils'
+  const events = await getEvents()
+  console.log(events);
+  (document.querySelector('.next-event') as HTMLElement).innerHTML = formatEvent(events[0])
+</script>
+
+<style is:global>
+.event {
+  text-align: left;
+  padding: 1rem;
+  background: #f4ae00;
+  max-width: 40rem;
+  margin: auto;
+}
+.event__title { margin: 0; }
+.event__date, .event__place { font-weight: 500; }
+.event__description { margin-top: 1rem; font-size: 1.2rem; }
+</style>
