@@ -20,6 +20,9 @@ import Footer from '../components/Footer.astro'
     <meta name="description" content={description}>
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
     <meta name="author" content="JerryLabs" />
     <meta property="og:title" content={ogTitle || title} />
     <meta property="og:url" content={Astro.url.pathname} />
@@ -40,7 +43,6 @@ import Footer from '../components/Footer.astro'
 </html>
 
 <style is:global>
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500');
   html, body {
     margin: 0;
     padding: 0;
@@ -95,6 +97,5 @@ import Footer from '../components/Footer.astro'
   .center { text-align: center; }
   .nomargin { margin: 0; }
   button { padding: 0; border: none; background: none; }
-
 
 </style>
