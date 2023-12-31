@@ -1,4 +1,4 @@
-export async function getEvents() {
+export async function getEvents(old = false) {
   const response = await fetch(
     'https://www.googleapis.com/calendar/v3/calendars/34b01b0108fa086637a50976a921db6359b0b0e6c9254544f7d9fac11aab6658@group.calendar.google.com/events?key=AIzaSyAAEOD-G6kwkWu-AMClCcwY7vQStNi2cTo',
     {
@@ -7,7 +7,13 @@ export async function getEvents() {
     }
   )
   const data = await response.json()
-  return data.items.sort((x, y) => new Date(x.end.dateTime || x.end.date) - new Date(y.end.dateTime || y.end.date))
+  return data.items
+    .filter((e) => {
+      const date = new Date(e.end.dateTime || e.end.date)
+      const today =  new Date()
+      return old ? date < today : date > today
+    })
+    .sort((x, y) => new Date(x.end.dateTime || x.end.date) - new Date(y.end.dateTime || y.end.date))
 }
 
 export function formatEvent(e) {
@@ -33,7 +39,6 @@ export function formatEvent(e) {
   } else {
     startDate = new Date(e.start.dateTime)
     endDate = new Date(e.end.dateTime)
-    console.log('xxx', startDate, endDate, startDate === endDate)
     const sameDay = startDate.getDay() === endDate.getDay()
     if (startDate.getTime() === endDate.getTime()) {
       date = new Intl.DateTimeFormat('cs-CZ', {

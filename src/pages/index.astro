@@ -20,9 +20,9 @@ import Layout from 'layout:Layout'
 
 <script>
   import { getEvents, formatEvent } from 'utils'
-  const events = await getEvents()
-  console.log(events);
-  (document.querySelector('.next-event') as HTMLElement).innerHTML = formatEvent(events[0])
+  const events = await getEvents();
+  (document.querySelector('.next-event') as HTMLElement).innerHTML = events[0] ? formatEvent(events[0]) : 'Bohužel aktuálně neplánujeme žádnou akci.'
+
 </script>
 
 <style is:global>

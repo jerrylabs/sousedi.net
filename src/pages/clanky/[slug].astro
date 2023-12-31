@@ -1,0 +1,36 @@
+---
+// import Jumbotron from 'component:Jumbotron'
+import Jumbotron from 'component:Jumbotron'
+import Layout from 'layout:Layout'
+
+type Post = {
+  file: string
+  rawContent: () => string
+  Content: any
+  frontmatter: any
+}
+
+export async function getStaticPaths() {
+    let posts: Post[] = await Astro.glob('../../data/posts/*/*.md')
+    return (posts as Post[]).map(p => ({
+      params: { slug: p.file.split('/')?.pop()?.split('.').shift() },
+      props: { post: p },
+    }));
+  }
+
+const { Content, frontmatter } = Astro.props.post;
+const { title, image, publishDate } = frontmatter;
+// const { slug, readingTime } = getPostData(Astro.props.post);
+
+---
+
+<Layout>
+
+    <Jumbotron title={title} image={image || 'nad_rybniky.jpg'} />
+    <div class="container">
+    <p>{publishDate}</p>
+      <article class="content">
+        <Content />
+      </article>
+  </div>
+</Layout>

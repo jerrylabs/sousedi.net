@@ -14,7 +14,7 @@ import Layout from 'layout:Layout'
   import { getEvents, formatEvent } from 'utils'
   const events = await getEvents()
   console.log(events);
-  (document.querySelector('.events') as HTMLElement).innerHTML = events.map(formatEvent).join('')
+  (document.querySelector('.events') as HTMLElement).innerHTML = events.length ? events.map(formatEvent).join('') : 'Bohužel aktuálně neplánujeme žádné události.'
 </script>
 
 <style is:global>
