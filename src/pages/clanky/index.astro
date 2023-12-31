@@ -8,7 +8,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).getTime()
 ---
 
 <Layout>
-  <Jumbotron title="Co nového?" image="soumrak_v_orlove.jpeg" position="bottom" />
+  <Jumbotron title="Co nového?" image="soumrak_v_orlove.jpg" position="bottom" />
   <main class="container">
     <div class="posts">
       {allPosts.length ?
@@ -21,7 +21,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).getTime()
               <div class="post__image" style={{backgroundImage: `url('/img/${post.frontmatter.image || 'nad_rybniky.jpg'}') `}} />
               <h2 class="post__title">{post.frontmatter.title}</h2>
               <span class="post__date">{post.frontmatter.publishDate}</span>
-              <p>{post.frontmatter.description}</p>
+              <p class="post__description">{post.frontmatter.description}</p>
             </div>
           )
         }) : (
@@ -43,25 +43,25 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).getTime()
   }
   .post {
     flex: 1 0 calc(33% - 0.6666rem);
-      max-width: calc(33% - 0.6666rem);
+    max-width: calc(33% - 0.6666rem);
     color: black;
     text-decoration: none;
     background: #f4ae00;
-    font-size: 1rem;
+    /* font-size: 1rem; */
     padding: 1rem;
     box-sizing: border-box;
-    @media (max-width: 800px) {
+    @media (max-width: 1000px) {
       flex: 1 0 calc(50% - 1rem);
       max-width: calc(50% - 1rem);
     }
-    @media (max-width: 360px) {
+    @media (max-width: 600px) {
       flex: 1 0 100%;
       max-width: 100%;
     }
   }
   .post__title {
     margin: 0;
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
     font-weight: 500;
   }
   .post__image {
@@ -71,5 +71,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).getTime()
     margin: -1rem;
     margin-bottom: 1rem;
   }
-
+  .post__description {
+    font-size: 1.2rem;
+  }
 </style>
