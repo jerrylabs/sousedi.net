@@ -1,12 +1,12 @@
 ---
 const {
   title = 'Sousedi.net',
-  description = 'Spoluobčané se společným zájmem o kultivaci veřejného prostoru, zlepšování kvality života a rozvoj demokratické společnosti',
+  description = 'Stránka obyvatel Orlové a okolí se společným zájmem o kultivaci veřejného prostoru, zlepšování kvality života a rozvoj demokratické společnosti',
   className,
   ogTitle,
-  ogImage,
-  ogType,
-  ogDescription
+  ogImage = '/img/sousedi-retro-logo.png',
+  ogType = 'website',
+  ogDescription,
 } = Astro.props;
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
@@ -26,8 +26,8 @@ import Footer from '../components/Footer.astro'
     <meta name="author" content="JerryLabs" />
     <meta property="og:title" content={ogTitle || title} />
     <meta property="og:url" content={Astro.url.pathname} />
-    <meta property="og:image" content={ogImage || '/img/retro/logo-sousedi.svg'} />
-    <meta property="og:type" content={ogType || 'website'} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:type" content={ogType} />
     <meta property="og:description" content={ogDescription || description} />
     <title>{title}</title>
   </head>
