@@ -70,6 +70,9 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).getTime()
     background-size: cover;
     margin: -1rem;
     margin-bottom: 1rem;
+    @media (max-width: 600px) {
+      padding-top: 16rem;
+    }
   }
   .post__description {
     font-size: 1.2rem;
