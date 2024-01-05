@@ -22,7 +22,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).getTime()
               <h2 class="post__title">{post.frontmatter.title}</h2>
               <span class="post__date">{post.frontmatter.publishDate}</span>
               <p class="post__description">{post.frontmatter.description}</p>
-            </div>
+            </a>
           )
         }) : (
           <p>
