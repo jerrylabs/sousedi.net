@@ -9,7 +9,7 @@ Včera se v prostorách našeho oblíbeného <a href="https://www.futra.cz/" tar
 
 Skvěle jsme si zahráli a všem děkujeme za účast! Protože se akce osvědčila, budeme v pořádání pokračovat na pravidelné bázi a to s výjimkou mimořádných okolností každý první čtvrtek v měsíci.
 
-Následující Deskovky se sousedy se proto budou konat ve čtvrtek 1.února 2024 opět v klubu Futra a všichni zájemci jsou tímto srdečně zváni. Budeme se na vás těšit!
+Následující Deskovky se sousedy se proto budou konat ve čtvrtek 1. února 2024 opět v klubu Futra a všichni zájemci jsou tímto srdečně zváni. Budeme se na vás těšit!
 
 Všechny naše akce včetně této najdete v [našem kalendáři](/kalendar).
 

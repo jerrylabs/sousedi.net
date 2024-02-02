@@ -7,35 +7,65 @@ import Layout from 'layout:Layout'
     <div class="events">
       Načítám události...
     </div>
+    <div class="old-events">
+      <button id="show-old-events-button">Zobrazit proběhlé události</button>
+    </div>
   </main>
 </Layout>
 
 <script>
   import { getEvents, formatEvent } from 'utils'
-  const events = await getEvents()
-  console.log(events);
-  (document.querySelector('.events') as HTMLElement).innerHTML = events.length ? events.map(formatEvent).join('') : 'Bohužel aktuálně neplánujeme žádné události.'
+  const events = await getEvents();
+
+  (document.querySelector('.events') as HTMLElement).innerHTML = events.length
+    ? events.map(formatEvent).join('')
+    : 'Bohužel aktuálně neplánujeme žádné události.'
+  const oldEvents = await getEvents(true)
+
+  function showOldEvents() {
+    (document.querySelector('.old-events') as HTMLElement).innerHTML = '<h2 class="subtitle">Proběhlé události</h2>' + (oldEvents.length
+      ? oldEvents.map(formatEvent).join('')
+      : 'Bohužel někam nam zmizely všechny proběhlé události.')
+  }
+
+  document.getElementById('show-old-events-button')?.addEventListener('click', showOldEvents)
+
 </script>
 
 <style is:global>
-  .events {
+  .events, .old-events {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
     @media (max-width: 1200px) {
       gap: 1rem;
     }
+    .subtitle { width: 100%; font-size: 2em; margin: 32px 0 -8px 0; }
   }
   .event {
     padding: 1rem;
     background: #f4ae00;
     flex: 1 0 calc(50% - 2rem);
+    max-width: calc(50% - 2rem);
     box-sizing: border-box;
     @media (max-width: 1200px) {
       flex: 1 0 100%;
+      max-width: 100%;
     }
   }
   .event__title { margin: 0; }
   .event__date, .event__place { font-weight: 500; }
   .event__description { margin-top: 1rem; font-size: 1.2rem; }
+  button {
+
+    font-family: 'Montserrat';
+    background:  #f4ae00;
+    padding: 12px 18px;
+    margin: 16px 0;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    &:hover {
+      transform: scale(1.1)
+    }
+  }
 </style>

@@ -13,7 +13,11 @@ export async function getEvents(old = false) {
       const today =  new Date()
       return old ? date < today : date > today
     })
-    .sort((x, y) => new Date(x.end.dateTime || x.end.date) - new Date(y.end.dateTime || y.end.date))
+    .sort((x, y) => {
+      const date1 = new Date(x.end.dateTime || x.end.date)
+      const date2 = new Date(y.end.dateTime || y.end.date)
+      return old ? date2 - date1 : date1 - date2
+    })
 }
 
 export function formatEvent(e) {

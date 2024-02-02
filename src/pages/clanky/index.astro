@@ -42,17 +42,22 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).getTime()
     flex-wrap: wrap;
   }
   .post {
-    flex: 1 0 calc(33% - 0.6666rem);
-    max-width: calc(33% - 0.6666rem);
+    flex: 1 0 calc(33.33% - 0.667rem);
+    max-width: calc(33.33% - 0.667rem);
     color: black;
     text-decoration: none;
     background: #f4ae00;
     /* font-size: 1rem; */
     padding: 1rem;
     box-sizing: border-box;
+
+    transition: all 0.2s ease;
+    &:hover {
+      transform: scale(1.07);
+    }
     @media (max-width: 1000px) {
-      flex: 1 0 calc(50% - 1rem);
-      max-width: calc(50% - 1rem);
+      flex: 1 0 calc(50% - 0.5rem);
+      max-width: calc(50% - 0.5rem);
     }
     @media (max-width: 600px) {
       flex: 1 0 100%;
