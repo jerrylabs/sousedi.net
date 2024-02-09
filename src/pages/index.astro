@@ -1,6 +1,6 @@
 ---
-import Jumbotron from 'component:Jumbotron'
-import Layout from 'layout:Layout'
+import Jumbotron from '@components/Jumbotron.astro'
+import Layout from '@layouts/Layout.astro'
 ---
 
 <Layout>
@@ -19,7 +19,7 @@ import Layout from 'layout:Layout'
 </Layout>
 
 <script>
-  import { getEvents, formatEvent } from 'utils'
+  import { getEvents, formatEvent } from '@utils'
   const events = await getEvents();
   (document.querySelector('.next-event') as HTMLElement).innerHTML = events[0] ? formatEvent(events[0]) : 'Bohužel aktuálně neplánujeme žádnou akci.'
 

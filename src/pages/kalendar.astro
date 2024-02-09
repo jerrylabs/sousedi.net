@@ -1,5 +1,5 @@
 ---
-import Layout from 'layout:Layout'
+import Layout from '@layouts/Layout.astro'
 ---
 <Layout>
   <main class="container">
@@ -14,7 +14,7 @@ import Layout from 'layout:Layout'
 </Layout>
 
 <script>
-  import { getEvents, formatEvent } from 'utils'
+  import { getEvents, formatEvent } from '@utils'
   const events = await getEvents();
 
   (document.querySelector('.events') as HTMLElement).innerHTML = events.length
