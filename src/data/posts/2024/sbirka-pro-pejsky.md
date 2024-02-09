@@ -1,8 +1,8 @@
 ---
-title: Máme nový web 🤩
-publishDate: 1. 1. 2024
-description: Podařilo se zprovoznit naše nové internetové stránky.
-image: nad_rybniky.jpg
+title: Proběhla novoroční sbírka pro pejsky 🐶
+publishDate: 9. 2. 2024
+description: Dnes jsme do orlovského útulku dovezli plný kufr dobrot pro pejsky.
+image: pejsci.jpg
 ---
 
 Dnes jsme do orlovského útulku dovezli plný kufr dobrot pro pejsky a taky spoustu dek, molitanů, starých spacáků a misky a vodítka.
