@@ -25,7 +25,7 @@ import Layout from 'layout:Layout'
   function showOldEvents() {
     (document.querySelector('.old-events') as HTMLElement).innerHTML = '<h2 class="subtitle">Proběhlé události</h2>' + (oldEvents.length
       ? oldEvents.map(formatEvent).join('')
-      : 'Bohužel někam nam zmizely všechny proběhlé události.')
+      : 'Bohužel někam nám zmizely všechny proběhlé události.')
   }
 
   document.getElementById('show-old-events-button')?.addEventListener('click', showOldEvents)
