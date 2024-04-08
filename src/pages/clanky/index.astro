@@ -4,7 +4,9 @@ import Layout from '@layouts/Layout.astro'
 
 
 let allPosts = await Astro.glob('../../data/posts/*/*.md')
-allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).getTime() - new Date(a.frontmatter.publishDate).getTime())
+const parseDate = (date) => date.split('.').map((d) => parseInt(d))
+const compareDates = (d1, d2) => d2[2] - d1[2] || d2[1] - d1[1] || d2[0] - d1[0]
+allPosts = allPosts.sort((a, b) => compareDates(parseDate(a.frontmatter.publishDate), parseDate(b.frontmatter.publishDate)))
 ---
 
 <Layout>
