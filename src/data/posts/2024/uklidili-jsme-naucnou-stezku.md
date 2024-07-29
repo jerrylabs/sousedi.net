@@ -1,7 +1,7 @@
 ---
 title: Uklidili jsme naučnou stezku 🧹
 publishDate: 6. 4. 2024
-description: V rámci akce Ukliďme Česko jsme spojili úklid v přírodě s vycházkou po orlovské naučné stezce
+description: V rámci akce Ukliďme Česko jsme spojili úklid v přírodě s vycházkou po orlovské naučné stezce.
 image: les_krajcok.jpeg
 ---
 

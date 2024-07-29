@@ -1,7 +1,7 @@
 ---
 title: Odstřel dolu lazy 🏢⚒️💥
 publishDate: 27. 7. 2024
-description: Zúčastnili jsme se odstřelu dolu Lazy na Vyhlídce Václava Havla
+description: Zúčastnili jsme se odstřelu dolu Lazy na Vyhlídce Václava Havla.
 image: dul_lazy.jpg
 ---
 
