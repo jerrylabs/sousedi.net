@@ -1,0 +1,65 @@
+---
+import Jumbotron from '@components/Jumbotron.astro'
+import Layout from '@layouts/Layout.astro'
+
+---
+
+<Layout>
+  <Jumbotron title="Turnaj ve WORMS" image="worms.jpg" position="center 6%" />
+  <div class="submenu">
+    <a href="#uvod">Úvod</a> - <a href="#registrace">Registrace</a> - <a href="#kontakt">Kontakt</a> - <a href="#prihlaseni">Seznam přihlášených</a>
+  </div>
+  <main class="container">
+      <div class="anchor" id="uvod"></div>
+      <p>
+        Letos je 15. výročí od vydání legendárních Worms: Armageddon. Přijďte si otestovat své schopnosti v této hře s ostatními v rámci sousedského turnaje v námi oblíbeném klubu Futra!
+      </p>
+      <p>
+        Turnaj bude probíhat v sobotu 9. listopadu od 16:00 v prostorách klubu Futra (Masarykova 1000, Orlová). K dispozici bude velkoplošný projektor, kde bude možno sledovat průběh hry, a ovládání klávesnicí či gamepadem dle libosti. Systém turnaje bude upřesněn dle počtu přihlášených.
+      </p>
+      <p>
+        Postup příhlášení:
+      </p>
+      <ol>
+        <li>Vyplňte registrační formulář zde na stránce</li>
+        <li>Uhraďte startovné 50,- Kč platbou na účet 1126400063/3030 s vaším jménem uvedeným ve zprávě pro příjemce</li>
+      </ol>
+
+      <div class="anchor" id="registrace"></div>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfB9sjclVedDIA8W1qepB8VqSjS5P0T1XfGd_IlvlpSzFK8_w/viewform?embedded=true" width="100%" frameborder="0" marginheight="0" marginwidth="0">Načítání…</iframe>
+      <p>Pro dokončení registrace po úspěšném odeslání formuláře zašlete prosím na účet 1126400063/3030 startovné 50,- Kč s vaším jménem ve zprávě pro příjemce.</p>
+      <img src="/img/qrworms.png" alt="QR kód pro platbu startovného" width="200" style="display: block; margin: auto;"/>
+
+      <div class="anchor" id="kontakt"></div>
+      <p>V případě jakýchkoliv dotazů nás neváhejte kontaktovat na e-mailu orlova@sousedi.net nebo osobně našeho koordinátora Jaroslava Kameňa na tel. 608 552 333.</p>
+
+      <div class="anchor" id="prihlaseni"></div>
+      <p>Seznam úspěšné zaregistraných týmů bude průběžně zveřejňován zde.</p>
+  </main>
+</Layout>
+
+<style>
+  p, ul, ol { font-size: 1.4rem; }
+  iframe { height: 2400px; }
+  @media (max-width: 740px) {
+    iframe { height: 2450px; }
+  }
+  @media (max-width: 580px) {
+    iframe { height: 2500px; }
+  }
+  @media (max-width: 480px) {
+    iframe { height: 2600px; }
+  }
+  .submenu {
+    text-align: center;
+    position: sticky;
+    top: 0;
+    padding: 8px;
+    width: 100%;
+    background: white;
+  }
+  .submenu:stuck {
+    box-shadow: 0 0 10px black;
+  }
+  .anchor {position: relative; top: -20px;}
+</style>
