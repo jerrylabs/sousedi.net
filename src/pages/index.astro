@@ -21,11 +21,16 @@ import Layout from '@layouts/Layout.astro'
 <script>
   import { getEvents, formatEvent } from '@utils'
   const events = await getEvents();
-  (document.querySelector('.next-event') as HTMLElement).innerHTML = events[0] ? formatEvent(events[0]) : 'Bohužel aktuálně neplánujeme žádnou akci.'
+  (document.querySelector('.next-event') as HTMLElement).innerHTML = events[0] ? `<div class="events">${formatEvent(events[0])}${events[1] ? formatEvent(events[1]) : ''}</div>` : 'Bohužel aktuálně neplánujeme žádnou akci.'
 
 </script>
 
 <style is:global>
+  .events, .old-events {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 .event {
   text-align: left;
   padding: 1rem;
