@@ -13,4 +13,4 @@ Následující Deskovky se sousedy se proto budou konat ve čtvrtek 1. února 20
 
 Všechny naše akce včetně této najdete v [našem kalendáři](/kalendar).
 
-![Deskové hry se sousedy ve Futře](/img/photos/24-01-04-deskovky.jpg)
+![Deskové hry se sousedy ve Futře](/img/photos/24-01-04-deskovky.jpg "Deskové hry se sousedy ve Futře")

@@ -11,4 +11,4 @@ Moc děkujeme všem, kteří jste na novoroční sousedskou sbírku pro pejsky p
 
 Věříme, že se nám tak společně povedlo alespoň trochu zpříjemnit našim zvířecím sousedům jejich čekání na nový domov, díky!
 
-![Plný kufr dobrot!](/img/photos/24-02-09-sbirka_pro_pejsky.jpg)
+![Plný kufr dobrot!](/img/photos/24-02-09-sbirka_pro_pejsky.jpg "Plný kufr dobrot!")

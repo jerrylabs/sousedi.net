@@ -15,8 +15,8 @@ Naposledy jsme tedy využili této možnosti, pokochali se a rozloučili s domin
 
 Děkujeme všem za účast, kterou jsme upřímně až tak hojnou na námi pořádané akci nečekali! 😁 Za komplikace s dopravou se omlouváme, doufáme, že jste si odstřel v rámci možnosti užili a nikdo snad moc nekolaboval z vedra a azbestového prachu. Na příští odstřel doporučujeme použít cyklodopravu pro lepší parkování a efektivnější evakuaci před oblakem 😉
 
-![Před odstřelem](/img/photos/24-07-27-odstrel_lazy01.jpeg)
+![Před odstřelem](/img/photos/24-07-27-odstrel_lazy01.jpeg "Před odstřelem")
 
-![Odstřel](/img/photos/24-07-27-odstrel_lazy02.jpeg)
+![Odstřel](/img/photos/24-07-27-odstrel_lazy02.jpeg "Odstřel")
 
-![Po odstřelu](/img/photos/24-07-27-odstrel_lazy03.jpeg)
+![Po odstřelu](/img/photos/24-07-27-odstrel_lazy03.jpeg "Po odstřelu")
