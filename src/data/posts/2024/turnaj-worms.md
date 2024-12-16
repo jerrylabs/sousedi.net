@@ -1,7 +1,7 @@
 ---
 title: "Turnaj ve Worms: Armageddon 🐛☢️💥"
 publishDate: 9. 11. 2024
-description: Proběhl první ročník turnaje Orlová Worms Cup
+description: Proběhl první ročník turnaje Orlová Worms Cup.
 image: /photos/24-11-09-trofej.JPEG
 ---
 
