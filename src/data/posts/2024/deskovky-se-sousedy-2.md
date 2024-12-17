@@ -17,94 +17,94 @@ Na všechny účastníky se budeme moc těšit a zatím vám popřejeme krásné
 <script src="/lightbox/js/lightbox-plus-jquery.min.js"></script>
 
 <div class="gallery">
-  <a href="/img/deskovky24/leden.jpg" data-lightbox="Deskovky 2024" data-title="Leden">
+  <a href="/img/deskovky24/leden.jpg" data-lightbox="Deskovky 2024" data-title="Tapestry v lednu">
     <img src="/img/deskovky24/leden.jpg" alt="Fotka">
   </a>
-  <a href="/img/deskovky24/leden1.JPEG" data-lightbox="Deskovky 2024" data-title="Leden">
-    <img src="/img/deskovky24/leden1.JPEG" alt="Fotka">
-  </a>
-  <a href="/img/deskovky24/leden2.JPEG" data-lightbox="Deskovky 2024" data-title="Leden">
-    <img src="/img/deskovky24/leden2.JPEG" alt="Fotka">
-  </a>
-  <a href="/img/deskovky24/leden3.JPEG" data-lightbox="Deskovky 2024" data-title="Leden">
+  <a href="/img/deskovky24/leden3.JPEG" data-lightbox="Deskovky 2024" data-title="Tapestry v lednu">
     <img src="/img/deskovky24/leden3.JPEG" alt="Fotka">
   </a>
-  <a href="/img/deskovky24/unor1.JPEG" data-lightbox="Deskovky 2024" data-title="Únor">
-    <img src="/img/deskovky24/unor1.JPEG" alt="Fotka">
+  <a href="/img/deskovky24/leden1.JPEG" data-lightbox="Deskovky 2024" data-title="Duna v lednu">
+    <img src="/img/deskovky24/leden1.JPEG" alt="Fotka">
   </a>
-  <a href="/img/deskovky24/unor2.JPEG" data-lightbox="Deskovky 2024" data-title="Únor">
+  <a href="/img/deskovky24/leden2.JPEG" data-lightbox="Deskovky 2024" data-title="Duna v lednu">
+    <img src="/img/deskovky24/leden2.JPEG" alt="Fotka">
+  </a>
+  <a href="/img/deskovky24/unor2.JPEG" data-lightbox="Deskovky 2024" data-title="Divukraj v únoru">
     <img src="/img/deskovky24/unor2.JPEG" alt="Fotka">
   </a>
-  <a href="/img/deskovky24/unor3.JPEG" data-lightbox="Deskovky 2024" data-title="Únor">
+  <a href="/img/deskovky24/unor3.JPEG" data-lightbox="Deskovky 2024" data-title="Na křídlech v únoru">
     <img src="/img/deskovky24/unor3.JPEG" alt="Fotka">
   </a>
-  <a href="/img/deskovky24/brezen1.JPEG" data-lightbox="Deskovky 2024" data-title="Březen">
+   <a href="/img/deskovky24/unor1.JPEG" data-lightbox="Deskovky 2024" data-title="Barová stejdž s Duchem v únoru">
+    <img src="/img/deskovky24/unor1.JPEG" alt="Fotka">
+  </a>
+  <a href="/img/deskovky24/brezen1.JPEG" data-lightbox="Deskovky 2024" data-title="Scythe v březnu">
     <img src="/img/deskovky24/brezen1.JPEG" alt="Fotka">
   </a>
-  <a href="/img/deskovky24/brezen2.JPEG" data-lightbox="Deskovky 2024" data-title="Březen">
+  <a href="/img/deskovky24/brezen2.JPEG" data-lightbox="Deskovky 2024" data-title="Scythe v březnu">
     <img src="/img/deskovky24/brezen2.JPEG" alt="Fotka">
   </a>
-  <a href="/img/deskovky24/brezen5.JPEG" data-lightbox="Deskovky 2024" data-title="Březen">
+  <a href="/img/deskovky24/brezen5.JPEG" data-lightbox="Deskovky 2024" data-title="Karetní stejdž v březnu">
     <img src="/img/deskovky24/brezen5.JPEG" alt="Fotka">
   </a>
-  <a href="/img/deskovky24/brezen4.JPEG" data-lightbox="Deskovky 2024" data-title="Duben">
+  <a href="/img/deskovky24/brezen4.JPEG" data-lightbox="Deskovky 2024" data-title="Dilema v dubnu">
     <img src="/img/deskovky24/brezen4.JPEG" alt="Fotka">
   </a>
-  <a href="/img/deskovky24/duben4.JPEG" data-lightbox="Deskovky 2024" data-title="Duben">
+  <a href="/img/deskovky24/duben4.JPEG" data-lightbox="Deskovky 2024" data-title="Azul v dubnu">
     <img src="/img/deskovky24/duben4.JPEG" alt="Fotka">
   </a>
-  <a href="/img/deskovky24/duben5.JPEG" data-lightbox="Deskovky 2024" data-title="Duben">
+  <a href="/img/deskovky24/duben5.JPEG" data-lightbox="Deskovky 2024" data-title="Zaklínač: dobrodružná hra v dubnu">
     <img src="/img/deskovky24/duben5.JPEG" alt="Fotka">
   </a>
-  <a href="/img/deskovky24/duben6.JPEG" data-lightbox="Deskovky 2024" data-title="Duben">
-    <img src="/img/deskovky24/duben6.JPEG" alt="Fotka">
-  </a>
-  <a href="/img/deskovky24/cerven4.JPEG" data-lightbox="Deskovky 2024" data-title="Červen">
-    <img src="/img/deskovky24/cerven4.JPEG" alt="Fotka">
-  </a>
-  <a href="/img/deskovky24/cerven5.JPEG" data-lightbox="Deskovky 2024" data-title="Červen">
-    <img src="/img/deskovky24/cerven5.JPEG" alt="Fotka">
-  </a>
-  <a href="/img/deskovky24/cerven6.JPEG" data-lightbox="Deskovky 2024" data-title="Červen">
+  <a href="/img/deskovky24/cerven6.JPEG" data-lightbox="Deskovky 2024" data-title="Zaklínač: dobrodružná hra v dubnu">
     <img src="/img/deskovky24/cerven6.JPEG" alt="Fotka">
   </a>
-  <a href="/img/deskovky24/srpen.JPEG" data-lightbox="Deskovky 2024" data-title="Srpen">
+  <a href="/img/deskovky24/duben6.JPEG" data-lightbox="Deskovky 2024" data-title="Zaklínač: Starý svět v dubnu">
+    <img src="/img/deskovky24/duben6.JPEG" alt="Fotka">
+  </a>
+  <a href="/img/deskovky24/cerven4.JPEG" data-lightbox="Deskovky 2024" data-title="Zima mrtvých v červnu">
+    <img src="/img/deskovky24/cerven4.JPEG" alt="Fotka">
+  </a>
+  <a href="/img/deskovky24/cerven5.JPEG" data-lightbox="Deskovky 2024" data-title="Fallout v červnu">
+    <img src="/img/deskovky24/cerven5.JPEG" alt="Fotka">
+  </a>
+  <a href="/img/deskovky24/srpen.JPEG" data-lightbox="Deskovky 2024" data-title="Cyborg Mutant Zombie Circus v srpnu">
     <img src="/img/deskovky24/srpen.JPEG" alt="Fotka">
   </a>
-  <a href="/img/deskovky24/zari1.jpg" data-lightbox="Deskovky 2024" data-title="Září">
-    <img src="/img/deskovky24/zari1.jpg" alt="Fotka">
-  </a>
-  <a href="/img/deskovky24/zari2.jpg" data-lightbox="Deskovky 2024" data-title="Září">
-    <img src="/img/deskovky24/zari2.jpg" alt="Fotka">
-  </a>
-  <a href="/img/deskovky24/zari3.jpg" data-lightbox="Deskovky 2024" data-title="Září">
-    <img src="/img/deskovky24/zari3.jpg" alt="Fotka">
-  </a>
-  <a href="/img/deskovky24/zari4.jpg" data-lightbox="Deskovky 2024" data-title="Září">
+  <a href="/img/deskovky24/zari4.jpg" data-lightbox="Deskovky 2024" data-title="Zima mrtvých v září">
     <img src="/img/deskovky24/zari4.jpg" alt="Fotka">
   </a>
-  <a href="/img/deskovky24/zari5.jpg" data-lightbox="Deskovky 2024" data-title="Září">
+  <a href="/img/deskovky24/zari1.jpg" data-lightbox="Deskovky 2024" data-title="Zima mrtvých v září">
+    <img src="/img/deskovky24/zari1.jpg" alt="Fotka">
+  </a>
+  <a href="/img/deskovky24/zari5.jpg" data-lightbox="Deskovky 2024" data-title="Cave Evil v září">
     <img src="/img/deskovky24/zari5.jpg" alt="Fotka">
   </a>
-  <a href="/img/deskovky24/zari6.jpg" data-lightbox="Deskovky 2024" data-title="Září">
+  <a href="/img/deskovky24/zari2.jpg" data-lightbox="Deskovky 2024" data-title="Cave Evil v září">
+    <img src="/img/deskovky24/zari2.jpg" alt="Fotka">
+  </a>
+  <a href="/img/deskovky24/zari3.jpg" data-lightbox="Deskovky 2024" data-title="Medvědi VS Mimina v září">
+    <img src="/img/deskovky24/zari3.jpg" alt="Fotka">
+  </a>
+  <a href="/img/deskovky24/zari6.jpg" data-lightbox="Deskovky 2024" data-title="Tři záříjové stejdže">
     <img src="/img/deskovky24/zari6.jpg" alt="Fotka">
   </a>
-  <a href="/img/deskovky24/rijen4.JPEG" data-lightbox="Deskovky 2024" data-title="Říjen">
+  <a href="/img/deskovky24/rijen4.JPEG" data-lightbox="Deskovky 2024" data-title="Root v říjnu">
     <img src="/img/deskovky24/rijen4.JPEG" alt="Fotka">
   </a>
-  <a href="/img/deskovky24/rijen5.JPEG" data-lightbox="Deskovky 2024" data-title="Říjen">
+  <a href="/img/deskovky24/rijen5.JPEG" data-lightbox="Deskovky 2024" data-title="Root v říjnu">
     <img src="/img/deskovky24/rijen5.JPEG" alt="Fotka">
   </a>
-  <a href="/img/deskovky24/listopad4.JPEG" data-lightbox="Deskovky 2024" data-title="Listopad">
-    <img src="/img/deskovky24/listopad4.JPEG" alt="Fotka">
-  </a>
-  <a href="/img/deskovky24/listopad5.JPEG" data-lightbox="Deskovky 2024" data-title="Listopad">
+  <a href="/img/deskovky24/listopad5.JPEG" data-lightbox="Deskovky 2024" data-title="Vlci v listopadu">
     <img src="/img/deskovky24/listopad5.JPEG" alt="Fotka">
   </a>
-  <a href="/img/deskovky24/prosinec5.JPEG" data-lightbox="Deskovky 2024" data-title="Prosinec">
+  <a href="/img/deskovky24/listopad4.JPEG" data-lightbox="Deskovky 2024" data-title="Vlci v listopadu">
+    <img src="/img/deskovky24/listopad4.JPEG" alt="Fotka">
+  </a>
+  <a href="/img/deskovky24/prosinec5.JPEG" data-lightbox="Deskovky 2024" data-title="Worms v prosinci">
     <img src="/img/deskovky24/prosinec5.JPEG" alt="Fotka">
   </a>
-  <a href="/img/deskovky24/prosinec4.JPEG" data-lightbox="Deskovky 2024" data-title="Prosinec">
+  <a href="/img/deskovky24/prosinec4.JPEG" data-lightbox="Deskovky 2024" data-title="Deep Sea Adventura na barové stejdži v prosinci">
     <img src="/img/deskovky24/prosinec4.JPEG" alt="Fotka">
   </a>
 </div>
