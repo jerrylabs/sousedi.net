@@ -23,9 +23,8 @@ const { title, image, publishDate } = frontmatter;
 ---
 
 <Layout>
-
-    <Jumbotron title={title} subtitle={publishDate} image={image || 'nad_rybniky.jpg'} />
-    <div class="container">
+  <Jumbotron title={title} subtitle={publishDate} image={image || 'nad_rybniky.jpg'} />
+  <div class="container">
     <article class="content">
       <Content />
     </article>
