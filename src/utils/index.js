@@ -30,6 +30,7 @@ export function formatEvent(e) {
       date = new Intl.DateTimeFormat('cs-CZ', {
         day: 'numeric',
         month: 'long',
+        year: 'numeric'
       }).format(startDate)
     } else {
       date = `${new Intl.DateTimeFormat('cs-CZ', {
@@ -37,7 +38,8 @@ export function formatEvent(e) {
         month: startDate.getMonth() === endDate.getMonth() ? undefined : 'long'
       }).format(startDate)} - ${new Intl.DateTimeFormat('cs-CZ', {
         day: 'numeric',
-        month: 'long'
+        month: 'long',
+        year: 'numeric'
       }).format(endDate)}`
     }
   } else {
@@ -48,6 +50,7 @@ export function formatEvent(e) {
       date = new Intl.DateTimeFormat('cs-CZ', {
         day: 'numeric',
         month: 'long',
+        year: 'numeric',
         hour: '2-digit',
         minute: '2-digit',
       }).format(startDate)
@@ -57,6 +60,7 @@ export function formatEvent(e) {
         month: 'long',
         hour: '2-digit',
         minute: '2-digit',
+        year: 'numeric',
       }).format(startDate)} - ${new Intl.DateTimeFormat('cs-CZ', {
         day: sameDay ? undefined : 'numeric',
         month: sameDay ? undefined : 'long',
