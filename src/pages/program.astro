@@ -1,0 +1,40 @@
+---
+import Jumbotron from '@components/Jumbotron.astro'
+import Layout from '@layouts/Layout.astro'
+
+---
+
+<Layout>
+  <Jumbotron title="Program již brzy" image="soumrak_v_orlove.jpg" position="bottom" />
+  <main class="container">
+      <h1>Základní témata</h1>
+      <p>Obecné teze, z kterých budou vycházet konkrétní body:</p>
+      <ul class="🤝">
+      <li>lidé spolu mluví dříve, než se začnou nenávidět,</li>
+      <li>síla slouží ochraně, nikoliv ovládání,</li>
+      <li>odlišnost není důvodem k nepřátelství,</li>
+      <li>odpovědnost je stejně důležitá jako svoboda,</li>
+      <li>politika je službou, nikoliv cestou k moci.</li>
+      </ul>
+      <p>Zajímá-li vás více, můžete si přečíst náš <a href="/manifest">manifest</a>.</p>
+
+  </main>
+</Layout>
+
+<style>
+  p, ul { font-size: 1.4rem; }
+  .🤝 {
+    list-style: none;
+    padding: 0;
+    margin-left: 1rem;
+
+    li {
+      padding-left: 1rem;
+      text-indent: -0.7rem;
+    }
+
+    li::before {
+      content: "🤝 ";
+    }
+  }
+</style>

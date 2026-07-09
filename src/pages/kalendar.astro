@@ -44,10 +44,11 @@ import Layout from '@layouts/Layout.astro'
   }
   .event {
     padding: 1rem;
-    background: #f4ae00;
+    background: #ffdd00;
     flex: 1 0 calc(50% - 2rem);
     max-width: calc(50% - 2rem);
     box-sizing: border-box;
+    border-radius: 1rem;
     @media (max-width: 1200px) {
       flex: 1 0 100%;
       max-width: 100%;
@@ -64,6 +65,7 @@ import Layout from '@layouts/Layout.astro'
     margin: 16px 0;
     cursor: pointer;
     transition: all 0.2s ease-out;
+    border-radius: 0.5rem;
     &:hover {
       transform: scale(1.1)
     }

@@ -15,7 +15,7 @@ allPosts = allPosts.sort((a, b) => compareDates(parseDate(a.frontmatter.publishD
 ---
 
 <Layout>
-  <Jumbotron title="Co nového?" image="soumrak_v_orlove.jpg" position="bottom" />
+  <Jumbotron title="Naše příběhy" image="soumrak_v_orlove.jpg" position="bottom" />
   <main class="container">
     <div class="posts">
       {allPosts.length ?
@@ -33,7 +33,7 @@ allPosts = allPosts.sort((a, b) => compareDates(parseDate(a.frontmatter.publishD
           )
         }) : (
           <p>
-            Zatím vše při starém.
+            Šel jeden příbeh, zakopnul a spadnul do díry číslo 404.
           </p>
         )
       }
@@ -53,10 +53,12 @@ allPosts = allPosts.sort((a, b) => compareDates(parseDate(a.frontmatter.publishD
     max-width: calc(33.33% - 0.667rem);
     color: black;
     text-decoration: none;
-    background: #f4ae00;
+    background: #ffdd00;
     /* font-size: 1rem; */
     padding: 1rem;
     box-sizing: border-box;
+    border-radius: 1rem;
+    overflow: hidden;
 
     transition: all 0.2s ease;
     &:hover {
@@ -82,6 +84,8 @@ allPosts = allPosts.sort((a, b) => compareDates(parseDate(a.frontmatter.publishD
     background-size: cover;
     margin: -1rem;
     margin-bottom: 1rem;
+    border-bottom: 0.5rem solid black;
+
     @media (max-width: 600px) {
       padding-top: 16rem;
     }

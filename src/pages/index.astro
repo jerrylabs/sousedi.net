@@ -4,8 +4,16 @@ import Layout from '@layouts/Layout.astro'
 ---
 
 <Layout>
-  <Jumbotron height="30rem" title="V Orlové svítá na lepší časy" image="soumrak_v_orlove.jpg" position="bottom" />
+  <Jumbotron height="30rem" title="Sousedi Orlová" image="soumrak_v_orlove.jpg" position="bottom" />
   <main class="container">
+    <div class="intro">
+      <p>
+        Sousedi jsou lidé, kteří věří, že společnost funguje nejlépe tehdy, když se k sobě chováme jako dobří sousedé.
+      </p>
+      <p>
+        Začínáme v Orlové, ale myšlenka sousedství nezná hranice. Jsme sousedy ve městě, v republice, na Zemi a možná jednou i mezi hvězdami.
+      </p>
+    </div>
     <div class="center">
       <h2>Nejbližší akce:</h2>
       <div class="next-event">
@@ -34,11 +42,23 @@ import Layout from '@layouts/Layout.astro'
 .event {
   text-align: left;
   padding: 1rem;
-  background: #f4ae00;
+  background: #ffdd00;
   max-width: 40rem;
   margin: auto;
 }
 .event__title { margin: 0; }
 .event__date, .event__place { font-weight: 500; }
 .event__description { margin-top: 1rem; font-size: 1.2rem; }
+
+.intro {
+  background: #ffdd00;
+  font-style: italic;
+  padding: 2rem 6rem;
+  font-size: 1.4rem;
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 40rem;
+  box-sizing: border-box;
+  border-radius: 1rem;
+}
 </style>
