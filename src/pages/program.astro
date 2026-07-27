@@ -21,10 +21,11 @@ const byOrder = (a: Topic, b: Topic) =>
   (a.frontmatter.order ?? 999) - (b.frontmatter.order ?? 999)
 
 const topics = allTopics
-  .filter((t) => t.frontmatter.type !== 'referendum')
+  .filter((t) => !t.frontmatter.type)
   .sort(byOrder)
 
 const referendum = allTopics.find((t) => t.frontmatter.type === 'referendum')
+const hiddenTopic = allTopics.find((t) => t.frontmatter.type === 'hidden')
 
 const topicImage = (image?: string) => {
   if (image && fs.existsSync(`public/img/topics/${image}`)) {
@@ -76,15 +77,18 @@ const topicImage = (image?: string) => {
             <button class="referendum__arrow" data-referendum-toggle type="button">
               <span class="referendum__arrow-icon">▲</span> ANO
             </button>
-            <button class="referendum__arrow" data-referendum-toggle type="button">
+            <button class="referendum__arrow" type="button">
               <span class="referendum__arrow-icon">▼</span> NE
             </button>
           </div>
 
           <div class="referendum__hidden" hidden>
-            <div class="referendum__content">
-              <referendum.Content />
-            </div>
+            {hiddenTopic && (
+              <div class="referendum__content">
+                <h3 class="referendum__title">{hiddenTopic.frontmatter.title}</h3>
+                <hiddenTopic.Content />
+              </div>
+            )}
             <div class="referendum__poll">
               <p class="referendum__poll-question">Byli byste pro?</p>
               <div class="referendum__poll-buttons">
