@@ -1,5 +1,4 @@
 ---
-import fs from 'node:fs'
 import Jumbotron from '@components/Jumbotron.astro'
 import Layout from '@layouts/Layout.astro'
 
@@ -27,12 +26,7 @@ const topics = allTopics
 const referendum = allTopics.find((t) => t.frontmatter.type === 'referendum')
 const hiddenTopic = allTopics.find((t) => t.frontmatter.type === 'hidden')
 
-const topicImage = (image?: string) => {
-  if (image && fs.existsSync(`public/img/topics/${image}`)) {
-    return `/img/topics/${image}`
-  }
-  return '/img/nad_rybniky.jpg'
-}
+const topicImage = (image?: string) => image ||  '/img/nad_rybniky.jpg';
 ---
 
 <Layout>
