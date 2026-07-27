@@ -57,11 +57,7 @@ const topicImage = (image?: string) => {
             <div
               class="topic__image"
               style={{ backgroundImage: `url('${topicImage(topic.frontmatter.image)}')` }}
-            >
-              <div class="topic__overlay">
-                <p>{topic.frontmatter.description}</p>
-              </div>
-            </div>
+            />
             <div class="topic__body">
               <h3 class="topic__title">{topic.frontmatter.title}</h3>
               <p class="topic__text">{topic.frontmatter.description}</p>
@@ -177,37 +173,9 @@ const topicImage = (image?: string) => {
     background-position: center;
     background-size: cover;
     border-bottom: 0.5rem solid black;
-    position: relative;
 
     @media (max-width: 600px) {
       padding-top: 16rem;
-    }
-  }
-  .topic__overlay {
-    display: none;
-  }
-  @media (hover: hover) and (pointer: fine) and (min-width: 1000px) {
-    .topic__overlay {
-      display: flex;
-      position: absolute;
-      inset: 0;
-      align-items: center;
-      justify-content: center;
-      box-sizing: border-box;
-      padding: 1.25rem;
-      background: rgba(0, 0, 0, 0.78);
-      color: #ffdd00;
-      opacity: 0;
-      transition: opacity 0.2s ease;
-
-      p {
-        margin: 0;
-        font-size: 1.25rem;
-        text-align: center;
-      }
-    }
-    .topic:hover .topic__overlay {
-      opacity: 1;
     }
   }
   .topic__body {

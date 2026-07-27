@@ -1,5 +1,4 @@
 ---
-import fs from 'node:fs'
 import Jumbotron from '@components/Jumbotron.astro'
 import Layout from '@layouts/Layout.astro'
 
@@ -29,10 +28,7 @@ const { topic } = Astro.props
 const { Content, frontmatter } = topic
 const { title, image } = frontmatter
 
-const jumbotronImage =
-  image && fs.existsSync(`public/img/topics/${image}`)
-    ? `topics/${image}`
-    : 'nad_rybniky.jpg'
+const jumbotronImage = image ? `topics/${image}` : 'nad_rybniky.jpg'
 ---
 
 <Layout title={`${title} – Náš program`}>

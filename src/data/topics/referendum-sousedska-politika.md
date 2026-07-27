@@ -1,8 +1,8 @@
 ---
 title: Referendum – byli byste pro?
-order: 8
+order: 9
 image: referendum.png
-type: referendum
+type: hidden
 description: Zapojte se do rozhodování o naší sousedské zahraniční politice.
 ---
 
