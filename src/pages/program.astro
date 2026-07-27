@@ -26,7 +26,7 @@ const topics = allTopics
 const referendum = allTopics.find((t) => t.frontmatter.type === 'referendum')
 const hiddenTopic = allTopics.find((t) => t.frontmatter.type === 'hidden')
 
-const topicImage = (image?: string) => image ||  '/img/nad_rybniky.jpg';
+const topicImage = (image?: string) => image ? `/img/topics/${image}` : '/img/nad_rybniky.jpg';
 ---
 
 <Layout>
