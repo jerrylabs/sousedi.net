@@ -1,0 +1,63 @@
+---
+import fs from 'node:fs'
+import Jumbotron from '@components/Jumbotron.astro'
+import Layout from '@layouts/Layout.astro'
+
+type Topic = {
+  file: string
+  Content: any
+  frontmatter: {
+    title: string
+    order?: number
+    image?: string
+    description?: string
+    type?: string
+  }
+}
+
+export async function getStaticPaths() {
+  const topics: Topic[] = await Astro.glob('../../data/topics/*.md')
+  return topics
+    .filter((t) => t.frontmatter.type !== 'referendum')
+    .map((topic) => ({
+      params: { slug: topic.file.split('/')?.pop()?.split('.').shift() },
+      props: { topic },
+    }))
+}
+
+const { topic } = Astro.props
+const { Content, frontmatter } = topic
+const { title, image } = frontmatter
+
+const jumbotronImage =
+  image && fs.existsSync(`public/img/topics/${image}`)
+    ? `topics/${image}`
+    : 'nad_rybniky.jpg'
+---
+
+<Layout title={`${title} – Náš program`}>
+  <Jumbotron title={title} image={jumbotronImage} position="center" />
+  <div class="container">
+    <p class="back"><a href="/program">← Zpět na program</a></p>
+    <article class="content">
+      <Content />
+    </article>
+  </div>
+</Layout>
+
+<style is:global>
+article {
+  font-size: 1.4rem;
+  p { max-width: 100%; }
+  img {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    margin: 1rem auto;
+  }
+}
+.back {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+}
+</style>
