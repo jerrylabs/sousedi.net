@@ -5,3 +5,5 @@ description: Nasadíme moderní technologie pro maximalizaci výnosů z třídě
 ---
 
 Nasadíme nejmodernější technologie pro maximalizaci výnosů z efektivního třídění odpadů. Chytrá koncepce nám umožní udržet poplatky pod kontrolou – už žádné zvyšování poplatků za odpad!
+
+Podpoříme vznik re-use centra.
