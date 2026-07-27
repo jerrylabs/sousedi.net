@@ -1,25 +1,116 @@
 ---
+import fs from 'node:fs'
 import Jumbotron from '@components/Jumbotron.astro'
 import Layout from '@layouts/Layout.astro'
 
+type Topic = {
+  file: string
+  Content: any
+  frontmatter: {
+    title: string
+    order?: number
+    image?: string
+    description?: string
+    type?: string
+  }
+}
+
+const allTopics: Topic[] = await Astro.glob('../data/topics/*.md')
+
+const byOrder = (a: Topic, b: Topic) =>
+  (a.frontmatter.order ?? 999) - (b.frontmatter.order ?? 999)
+
+const topics = allTopics
+  .filter((t) => t.frontmatter.type !== 'referendum')
+  .sort(byOrder)
+
+const referendum = allTopics.find((t) => t.frontmatter.type === 'referendum')
+
+const topicImage = (image?: string) => {
+  if (image && fs.existsSync(`public/img/topics/${image}`)) {
+    return `/img/topics/${image}`
+  }
+  return '/img/nad_rybniky.jpg'
+}
 ---
 
 <Layout>
-  <Jumbotron title="Program již brzy" image="soumrak_v_orlove.jpg" position="bottom" />
+  <Jumbotron title="Náš program" image="soumrak_v_orlove.jpg" position="bottom" />
   <main class="container">
-      <h1>Základní témata</h1>
-      <p>Obecné teze, z kterých budou vycházet konkrétní body:</p>
-      <ul class="🤝">
+    <h2>Zásady dobrých sousedů</h2>
+    <ul class="🤝">
       <li>lidé spolu mluví dříve, než se začnou nenávidět,</li>
       <li>síla slouží ochraně, nikoliv ovládání,</li>
       <li>odlišnost není důvodem k nepřátelství,</li>
       <li>odpovědnost je stejně důležitá jako svoboda,</li>
       <li>politika je službou, nikoliv cestou k moci.</li>
-      </ul>
-      <p>Zajímá-li vás více, můžete si přečíst náš <a href="/manifest">manifest</a>.</p>
+    </ul>
+    <p>Zajímá-li vás více, můžete si přečíst náš <a href="/manifest">manifest</a>. Z našich zásad vychází konkrétní body, které se budeme snažit posadit do praxe.</p>
 
+    <h2>Naše témata</h2>
+    <div class="topics">
+      {topics.map((topic) => (
+        <article class="topic">
+          <div
+            class="topic__image"
+            style={{ backgroundImage: `url('${topicImage(topic.frontmatter.image)}')` }}
+          />
+          <div class="topic__body">
+            <h3 class="topic__title">{topic.frontmatter.title}</h3>
+            <p class="topic__text">{topic.frontmatter.description}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    {referendum && (
+      <section class="referendum" id="referendum">
+        <div
+          class="referendum__image"
+          style={{ backgroundImage: `url('${topicImage(referendum.frontmatter.image)}')` }}
+        />
+        <div class="referendum__body">
+          <h3 class="referendum__title">{referendum.frontmatter.title}</h3>
+          <p class="referendum__text">{referendum.frontmatter.description}</p>
+          <div class="referendum__arrows">
+            <button class="referendum__arrow" data-referendum-toggle type="button">
+              <span class="referendum__arrow-icon">▲</span> ANO
+            </button>
+            <button class="referendum__arrow" data-referendum-toggle type="button">
+              <span class="referendum__arrow-icon">▼</span> NE
+            </button>
+          </div>
+
+          <div class="referendum__hidden" hidden>
+            <div class="referendum__content">
+              <referendum.Content />
+            </div>
+            <div class="referendum__poll">
+              <p class="referendum__poll-question">Byli byste pro?</p>
+              <div class="referendum__poll-buttons">
+                <button type="button" class="referendum__poll-btn" disabled>ANO</button>
+                <button type="button" class="referendum__poll-btn" disabled>NE</button>
+              </div>
+              <p class="referendum__poll-note">Hlasování bude brzy spuštěno.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    )}
   </main>
 </Layout>
+
+<script>
+  document.querySelectorAll('[data-referendum-toggle]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const hidden = document.querySelector('.referendum__hidden') as HTMLElement | null
+      if (hidden) {
+        hidden.hidden = false
+        hidden.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+      }
+    })
+  })
+</script>
 
 <style>
   p, ul { font-size: 1.4rem; }
@@ -36,5 +127,146 @@ import Layout from '@layouts/Layout.astro'
     li::before {
       content: "🤝 ";
     }
+  }
+
+  h2 { margin-top: 3rem; }
+
+  .topics {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .topic {
+    flex: 1 0 calc(33.33% - 0.667rem);
+    max-width: calc(33.33% - 0.667rem);
+    background: #ffdd00;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s ease;
+
+    &:hover {
+      transform: scale(1.04);
+    }
+    @media (max-width: 1000px) {
+      flex: 1 0 calc(50% - 0.5rem);
+      max-width: calc(50% - 0.5rem);
+    }
+    @media (max-width: 600px) {
+      flex: 1 0 100%;
+      max-width: 100%;
+    }
+  }
+  .topic__image {
+    padding-top: 12rem;
+    background-position: center;
+    background-size: cover;
+    border-bottom: 0.5rem solid black;
+
+    @media (max-width: 600px) {
+      padding-top: 16rem;
+    }
+  }
+  .topic__body {
+    padding: 1rem;
+  }
+  .topic__title {
+    margin: 0 0 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  .topic__text {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .referendum {
+    margin-top: 2rem;
+    background: #ffdd00;
+    border: 0.5rem solid black;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .referendum__image {
+    flex: 1 0 250px;
+    min-height: 14rem;
+    background-position: center;
+    background-size: cover;
+  }
+  .referendum__body {
+    flex: 2 1 300px;
+    padding: 1.5rem;
+    box-sizing: border-box;
+  }
+  .referendum__title {
+    margin: 0 0 0.5rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+  .referendum__text {
+    margin: 0 0 1rem;
+  }
+  .referendum__arrows {
+    display: flex;
+    gap: 1rem;
+  }
+  .referendum__arrow {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    background: black;
+    color: #ffdd00;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+  .referendum__arrow-icon {
+    display: inline-block;
+    margin-right: 0.3rem;
+  }
+  .referendum__hidden {
+    margin-top: 1.5rem;
+    border-top: 0.25rem solid black;
+    padding-top: 1rem;
+  }
+  .referendum__content {
+    font-size: 1.3rem;
+  }
+  .referendum__poll {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.05);
+  }
+  .referendum__poll-question {
+    margin: 0 0 0.75rem;
+    font-weight: 500;
+  }
+  .referendum__poll-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  .referendum__poll-btn {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    background: black;
+    color: #ffdd00;
+    border: none;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  .referendum__poll-note {
+    font-size: 1rem;
+    font-style: italic;
+    margin: 0.75rem 0 0;
   }
 </style>
