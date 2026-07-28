@@ -1,6 +1,7 @@
 ---
 title: Podpora sportu pro děti, seniory i společně
 order: 2
+image: sport.png
 description: Zavedeme babypasy a seniorpasy do zařízení s městskou správou a postavíme novou sportovní halu.
 ---
 

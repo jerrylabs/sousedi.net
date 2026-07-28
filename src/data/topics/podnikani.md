@@ -1,7 +1,7 @@
 ---
 title: Podpora podnikání a aktivních občanů
 order:
-image: parkoviste2.png
+image: podnikani.png
 description: "Vytvoříme podmínky pro živnostníky, spolky a aktivní sousedy, kteří oživují naše město."
 ---
 

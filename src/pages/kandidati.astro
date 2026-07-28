@@ -7,13 +7,103 @@ import Layout from '@layouts/Layout.astro'
 <Layout>
   <Jumbotron title="Naši kandidáti" image="soumrak_v_orlove.jpg" position="bottom" />
   <main class="container">
-     <p>Seznam pro vás připravujeme.</p>
-
-  </main>
+    <p>Naši kandidáti jsou lidé, kteří se rozhodli aktivně podílet na životě v obci a přispět k jejímu rozvoji. Všichni kandidáti jsou občané obce, kteří mají zájem o její budoucnost a chtějí se podílet na rozhodování o jejím směřování.</p>
+     <div class="candidates candidates--top10">
+      <div class="candidate">
+        <img src="/img/people/milan-rapcak.jpg" alt="Fotka Ing. Milan Rapčák" class="candidate__photo"/>
+        <h3 class="candidate__name">Ing. Milan Rapčák</h3>
+      </div>
+      <div class="candidate">
+        <img src="/img/people/martin-sliwka.jpg" alt="Fotka Mgr. Martin Sliwka" class="candidate__photo candidate__photo--shift-up"/>
+        <h3 class="candidate__name">Mgr. Martin Sliwka</h3>
+      </div>
+      <div class="candidate">
+        <img src="/img/people/yvona-dluhosova.jpg" alt="Fotka Mgr. Yvona Dluhošová" class="candidate__photo"/>
+        <h3 class="candidate__name">Mgr. Yvona Dluhošová</h3>
+      </div>
+      <div class="candidate">
+        <img src="/img/people/miroslav-sedlacek.jpg" alt="Fotka Bc. Miroslav Sedláček" class="candidate__photo"/>
+        <h3 class="candidate__name">Bc. Miroslav Sedláček</h3>
+      </div>
+      <div class="candidate">
+        <img src="/img/people/tomas-pacola.jpg" alt="Fotka Ing. Tomáš Pacola" class="candidate__photo"/>
+        <h3 class="candidate__name">Ing. Tomáš Pacola</h3>
+      </div>
+      <div class="candidate">
+        <img src="/img/people/jaroslav-kamen.jpg" alt="Fotka Ing. Jaroslav Kameň" class="candidate__photo"/>
+        <h3 class="candidate__name">Ing. Jaroslav Kameň</h3>
+      </div>
+      <div class="candidate">
+        <img src="/img/people/rostislav-klima.jpg" alt="Fotka Rostislav Klíma" class="candidate__photo"/>
+        <h3 class="candidate__name">Rostislav Klíma</h3>
+      </div>
+      <div class="candidate">
+        <img src="/img/people/lukas-neri.jpg" alt="Fotka Mgr. Lukáš Neri" class="candidate__photo candidate__photo--shift-up"/>
+        <h3 class="candidate__name">Mgr. Lukáš Neri</h3>
+      </div>
+      <div class="candidate">
+        <img src="/img/people/jiri-klupa.jpg" alt="Fotka Mgr. Jiří Klupa" class="candidate__photo candidate__photo--shift-up"/>
+        <h3 class="candidate__name">Mgr. Jiří Klupa</h3>
+      </div>
+      <div class="candidate">
+        <img src="/img/people/tomas-hruby.jpg" alt="Fotka Bc. Tomáš Hrubý" class="candidate__photo"/>
+        <h3 class="candidate__name">Bc. Tomáš Hrubý</h3>
+      </div>
+    </div>
+    <ol class="candidates candidates--11plus" start="11">
+      <li>Martin Walach</li>
+      <li>Ing. Gabriela Škrkoňová</li>
+      <li>Mgr. Radka Kamýčková</li>
+      <li>Bc. Radomír Balada</li>
+      <li>Martin Duda</li>
+      <li>Tadeáš Bednarz</li>
+      <li>Mgr. Barbora Veselá</li>
+      <li>Ing. Matyáš Sliwka</li>
+      <li>Lukáš Tomi</li>
+      <li>Ing. Alexandra Lisztwanová</li>
+      <li>Petr Hanusek</li>
+      <li>Ondřej Klíma</li>
+      <li>Marie Kupčíková</li>
+      <li>Bc. Martin Mojžíšek</li>
+      <li>Petr Bervid</li>
+      <li>Ivana Putková</li>
+      <li>Marie Mačkalová</li>
+      <li>Andrea Hrachovinová</li>
+      <li>Bc. Jolana Kameňová</li>
+      <li>Olga Rapčáková</li>
 </Layout>
 
 <style>
 
   p { font-size: 1.4rem; }
+  .candidates--top10 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .candidate {
+    text-align: center;
+  }
+  .candidate__photo {
+    width: 100%;
+    max-width: 200px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+    object-position: 0 -1rem;
+  }
+  .candidate__photo--shift-up {
+    object-position: 0 -2rem;
+  }
+  .candidate__name {
+    white-space: nowrap;
+  }
+  ol.candidates--11plus {
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding-left: 2.2rem;
+  }
 
 </style>
