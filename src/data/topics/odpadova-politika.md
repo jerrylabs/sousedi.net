@@ -1,7 +1,7 @@
 ---
 title: Komplexní koncepce odpadové politiky
 order: 3
-image: odpady.png
+image: odpad.png
 description: Nasadíme moderní technologie pro maximalizaci výnosů z třídění. Už žádné zvyšování poplatků za odpad!
 ---
 

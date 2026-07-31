@@ -1,6 +1,7 @@
 ---
 title: Bezpečnost
 order: 6
+image: bezpecnost.png
 description: Zefektivníme komunikaci mezi městskou a státní policií.
 ---
 

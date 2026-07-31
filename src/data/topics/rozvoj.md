@@ -1,7 +1,7 @@
 ---
 title: Rovnoměrný rozvoj všech částí města Orlové
 order: 8
-image: rozvoj.png
+image: "../duha.jpg"
 description: "Investice do oblastí i mimo sídliště a centrum."
 ---
 
