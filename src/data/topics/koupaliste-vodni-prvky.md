@@ -1,5 +1,6 @@
 ---
-title: Koupaliště a vodní prvky
+title: Vodní prvky na bývalé koupaliště
+shortTitle: Koupaliště a vodní prvky
 order: 1
 image: vodni-prvky.png
 description: Budeme bojovat za doplnění vodních prvků do areálu bývalého koupaliště i dalších lokalit.

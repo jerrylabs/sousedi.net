@@ -1,5 +1,6 @@
 ---
 title: Sousedská politika
+simpleTitle: Královec
 order: 8
 image: sousedska-politika.png
 type: hidden

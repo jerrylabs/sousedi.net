@@ -1,5 +1,6 @@
 ---
-title: Parkování a doprava
+title: Funkční a dostupné parkování, doprava
+shortTitle: Parkování a doprava
 order: 7
 image: parkoviste2.png
 description: "Otevřeme diskuzi s občany ohledně možného řešení parkování: parkovacích domů a rezidenčních zón."

@@ -1,5 +1,6 @@
 ---
 title: Referendum – byli byste pro?
+simpleTitle: Hlasování sousedů
 order: 9
 image: referendum.png
 type: hidden

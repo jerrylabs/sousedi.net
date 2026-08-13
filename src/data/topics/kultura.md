@@ -1,5 +1,6 @@
 ---
-title: Kultura pro všechny sousedy
+title: Více kultury a kulturního prostředí
+shorttitle: Kultura
 order: 4
 image: kultura.png
 description: Lepší využití areálu letního kina se zapojením místních spolků, škol a městských zařízení.

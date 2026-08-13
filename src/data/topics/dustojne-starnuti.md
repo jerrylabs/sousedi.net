@@ -1,5 +1,6 @@
 ---
-title: Důstojné stárnutí pro naše sousedy
+title: Lepší podmínky pro důstojné stárnutí
+shortTitle: Důstojné stárnutí
 order: 5
 image: dustojne-starnuti.png
 description: Navýšíme kapacitu sociální péče a zlepšíme využití volných prostor nemocnice

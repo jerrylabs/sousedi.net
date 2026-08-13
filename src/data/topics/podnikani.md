@@ -1,5 +1,5 @@
 ---
-title: Podpora podnikání a aktivních občanů
+title: Podpora podnikání, spolků a aktivních občanů
 order: 9
 description: "Vytvoříme podmínky pro živnostníky, spolky a aktivní sousedy, kteří oživují naše město."
 ---

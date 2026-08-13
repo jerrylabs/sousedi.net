@@ -1,5 +1,6 @@
 ---
-title: Bezpečnost
+title: Bezpečnost a&nbsp;pořádek v&nbsp;ulicích
+shortTitle: Bezpečnost
 order: 6
 image: bezpecnost.png
 description: Zefektivníme komunikaci mezi městskou a státní policií.
