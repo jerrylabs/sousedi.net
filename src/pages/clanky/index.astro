@@ -1,9 +1,20 @@
 ---
 import Jumbotron from '@components/Jumbotron.astro'
 import Layout from '@layouts/Layout.astro'
+import type { MarkdownInstance } from 'astro'
 
+type PostFrontmatter = {
+  title: string
+  publishDate: string
+  description?: string
+  image?: string
+}
 
-let allPosts = await Astro.glob('../../data/posts/*/*.md')
+type Post = MarkdownInstance<PostFrontmatter>
+
+let allPosts = Object.values(
+  import.meta.glob<Post>('../../data/posts/*/*.md', { eager: true }),
+)
 const parseDate = (date: string) => date.split('.').map((d) => parseInt(d))
 const compareDates = (d1: number[], d2: number[]) => {
   if (d1.length !== 3 || d2.length !==3) {

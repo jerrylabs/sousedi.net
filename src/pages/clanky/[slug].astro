@@ -1,21 +1,31 @@
 ---
 import Jumbotron from '@components/Jumbotron.astro'
 import Layout from '@layouts/Layout.astro'
+import type { MarkdownInstance } from 'astro'
 
-type Post = {
-  file: string
-  rawContent: () => string
-  Content: any
-  frontmatter: any
+type PostFrontmatter = {
+  title: string
+  image?: string
+  publishDate: string
+}
+
+type Post = MarkdownInstance<PostFrontmatter>
+
+type StaticPath = {
+  params: { slug: string | undefined }
+  props: { post: Post }
 }
 
 export async function getStaticPaths() {
-    let posts: Post[] = await Astro.glob('../../data/posts/*/*.md')
-    return (posts as Post[]).map(p => ({
-      params: { slug: p.file.split('/')?.pop()?.split('.').shift() },
-      props: { post: p },
-    }));
-  }
+  const posts = Object.values(
+    import.meta.glob<Post>('../../data/posts/*/*.md', { eager: true }),
+  )
+
+  return posts.map((post): StaticPath => ({
+    params: { slug: post.file.split('/')?.pop()?.split('.').shift() },
+    props: { post },
+  }))
+}
 
 const { Content, frontmatter } = Astro.props.post;
 const { title, image, publishDate } = frontmatter;

@@ -1,21 +1,23 @@
 ---
 import Jumbotron from '@components/Jumbotron.astro'
 import Layout from '@layouts/Layout.astro'
+import type { MarkdownInstance } from 'astro'
 
-type Topic = {
-  file: string
-  Content: any
-  frontmatter: {
-    title: string
-    order?: number
-    image?: string
-    description?: string
-    type?: string
-  }
+type TopicFrontmatter = {
+  title: string
+  order?: number
+  image?: string
+  description?: string
+  type?: string
 }
 
+type Topic = MarkdownInstance<TopicFrontmatter>
+
 export async function getStaticPaths() {
-  const topics: Topic[] = await Astro.glob('../../data/topics/*.md')
+  const topics = Object.values(
+    import.meta.glob<Topic>('../../data/topics/*.md', { eager: true }),
+  )
+
   return topics
     .filter((t) => t.frontmatter.type !== 'referendum')
     .map((topic) => ({
