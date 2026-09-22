@@ -1,5 +1,5 @@
 ---
-title: Bezpečnost a&nbsp;pořádek v&nbsp;ulicích
+title: Bezpečnost a pořádek v ulicích
 shortTitle: Bezpečnost
 order: 6
 image: bezpecnost.png

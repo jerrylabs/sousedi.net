@@ -2,7 +2,7 @@
 title: Rovnoměrný rozvoj všech městských částí
 simpleTitle: Rovnoměrný rozvoj
 order: 8
-image: "../duha.jpg"
+image: "rovnomerny-rozvoj.png"
 description: "Investice do oblastí i mimo sídliště a centrum."
 ---
 

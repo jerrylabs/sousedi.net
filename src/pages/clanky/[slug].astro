@@ -6,6 +6,7 @@ import type { MarkdownInstance } from 'astro'
 type PostFrontmatter = {
   title: string
   image?: string
+  bgPosition?: string
   publishDate: string
 }
 
@@ -33,7 +34,7 @@ const { title, image, publishDate } = frontmatter;
 ---
 
 <Layout>
-  <Jumbotron title={title} subtitle={publishDate} image={image || 'nad_rybniky.jpg'} />
+  <Jumbotron title={title} subtitle={publishDate} image={image || 'nad_rybniky.jpg'} position={frontmatter.bgPosition || 'center'} />
   <div class="container">
     <article class="content">
       <Content />
